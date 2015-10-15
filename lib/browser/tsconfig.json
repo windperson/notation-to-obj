@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "inlineSourceMap": false,
+    "module": "commonjs",
+    "newLine": "CRLF",
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es5"
+  }
+}
