@@ -1,2 +1,2 @@
 # notation-to-obj
-a js utiltiy library to get javascript object from a notation string
+Js Utility to get javascript object from a string notation

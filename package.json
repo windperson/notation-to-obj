@@ -1,0 +1,22 @@
+{
+  "name": "notation-to-obj",
+  "version": "0.0.1",
+  "description": "Js Utiltiy to get javascript object from a string notation like \"a.b.c\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/windperson/notation-to-obj.git"
+  },
+  "author": "Charles Pao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/windperson/notation-to-obj/issues"
+  },
+  "homepage": "https://github.com/windperson/notation-to-obj#readme",
+  "devDependencies": {
+    "mocha": "~2.3.3"
+  }
+}
