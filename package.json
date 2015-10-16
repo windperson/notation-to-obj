@@ -2,7 +2,7 @@
   "name": "notation-to-obj",
   "version": "0.0.1",
   "description": "Js Utiltiy to get javascript object from a string notation like \"a.b.c\"",
-  "main": "index.js",
+  "main": "./lib/node/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/windperson/notation-to-obj#readme",
   "devDependencies": {
-    "mocha": "~2.3.3"
+    "mocha": "~2.3.3",
+    "webpack": "~1.12.2"
   }
 }
