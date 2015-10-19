@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/windperson/notation-to-obj#readme",
   "devDependencies": {
+    "bunyan": "~1.5.1",
     "mocha": "~2.3.3",
+    "source-map-support": "~0.3.2",
     "webpack": "~1.12.2"
   }
 }
