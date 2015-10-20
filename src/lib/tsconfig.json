@@ -5,6 +5,7 @@
     "newLine": "CRLF",
     "removeComments": true,
     "sourceMap": true,
+    "declaration": true,
     "target": "es5"
   }
 }

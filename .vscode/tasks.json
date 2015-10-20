@@ -9,33 +9,17 @@
 {
 	"version": "0.1.0",
 
-	// The command is tsc. Assumes that tsc has been installed using npm install -g typescript
 	"command": "tsc",
 
 	// The command is a shell script
 	"isShellCommand": true,
 
 	// Show the output window only if unrecognized errors occur.
-	"showOutput":"always",
+	"showOutput": "silent",
 
 	// Tell the tsc compiler to use the tsconfig.json from the open folder.
-	"args": ["-p", "./src"],
+	"args": ["-p", "./src/lib/node"],
 
-	// use the standard tsc problem matcher to find compile problems
-	// in the output.
-	"problemMatcher": "$tsc"
-}
-
-
-// A task runner example that defines a problemMatcher inline instead of using
-// a predfined one.
-/*
-{
-	"version": "0.1.0",
-	"command": "tsc",
-	"isShellCommand": true,
-	"args": ["HelloWorld.ts"],
-	"showOutput": "silent",
 	"problemMatcher": {
 		// The problem is owned by the typescript language service. Ensure that the problems
 		// are merged with problems produced by Visual Studio's language service.
@@ -59,4 +43,3 @@
 		}
 	}
 }
-*/
