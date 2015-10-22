@@ -92,3 +92,7 @@ gulp.task('test:mocha', function () {
 gulp.task('test', function (callback) {
 	return runseq('build:test', 'test:mocha')
 });
+
+gulp.task('default', function (callback) {
+	return runseq('build', callback);
+});
