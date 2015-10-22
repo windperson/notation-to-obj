@@ -6,6 +6,8 @@
     "noEmitOnError": true,
     "removeComments": true,
     "noResolve": false,
+    
+    "declaration": true,
     "sourceMap": true,
     "target": "es5"
   }

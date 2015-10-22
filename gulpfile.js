@@ -16,7 +16,7 @@ var path_config = {
 	},
 	out: {
 		dest: path.join(build_folder, 'release'),
-		def_dest: path.join(build_folder, 'release/definitions'),
+		def_dest: path.join(build_folder, 'release','definitions'),
 		clean: [path.join(build_folder, 'release') + '/**/*']
 	},
 	test: {

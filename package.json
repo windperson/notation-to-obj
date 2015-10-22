@@ -2,7 +2,7 @@
   "name": "notation-to-obj",
   "version": "0.0.1",
   "description": "Js Utiltiy to get javascript object from a string notation like \"a.b.c\"",
-  "main": "./lib/node/index.js",
+  "main": "build/release/node/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
