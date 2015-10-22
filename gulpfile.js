@@ -16,7 +16,7 @@ var path_config = {
 	},
 	out: {
 		dest: path.join(build_folder, 'release'),
-		def_dest: path.join(build_folder, 'release','definitions'),
+		def_dest: path.join(build_folder, 'release', 'definitions'),
 		clean: [path.join(build_folder, 'release') + '/**/*']
 	},
 	test: {
@@ -57,7 +57,7 @@ gulp.task('copy:build', function () {
 gulp.task('compile:test', function () {
 	var tsProject = ts.createProject(path_config.test.ts_config);
 	var tsResult = buildTypeScript(tsProject);
-	var testDest = path.join(path_config.test.dest, './test/mocha');
+	var testDest = path.join(path_config.test.dest, './test_code/mocha');
 	return addSourceMap(tsResult.js)
         .pipe(gulp.dest(testDest));
 });
@@ -84,7 +84,7 @@ gulp.task('build:test', function (callback) {
 });
 
 gulp.task('test:mocha', function () {
-    return gulp.src([path_config.test.dest + '/test/mocha/**/*.js'], { read: false })
+    return gulp.src([path_config.test.dest + '/test_code/mocha/**/*.js'], { read: false })
 	// gulp-mocha needs filepaths so you can't have any plugins before it 
         .pipe(mocha());
 });
