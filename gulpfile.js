@@ -8,22 +8,23 @@ var merge = require('merge-stream');
 var runseq = require('run-sequence');
 var mocha = require('gulp-mocha');
 
+var build_folder = 'build';
+
 var path_config = {
 	src: {
 		ts_config: 'src/lib/tsconfig.json'
 	},
 	out: {
-		dest: 'release',
-		def_dest: 'release/definitions',
-		clean: ['release/**/*']
+		dest: path.join(build_folder, 'release'),
+		def_dest: path.join(build_folder, 'release/definitions'),
+		clean: [path.join(build_folder, 'release') + '/**/*']
 	},
 	test: {
 		ts_config: 'src/test/mocha/tsconfig.json',
-		dest: 'test',
-		clean: ['test/**/*']
+		dest: path.join(build_folder, 'test'),
+		clean: [path.join(build_folder, 'test') + '/**/*']
 	}
 };
-
 
 function buildTypeScript(tsProject) {
 	return tsProject.src({ base: "" })
@@ -62,12 +63,17 @@ gulp.task('compile:test', function () {
 });
 
 gulp.task('clean:src', function () {
-	return gulp.src(path_config.out.clean).pipe(vinylPaths(del));
+	return gulp.src(path_config.out.clean, { read: false })
+		.pipe(vinylPaths(del)).pipe(gulp.dest(path_config.out.dest));
 });
 
 gulp.task('clean:test', function () {
-	return gulp.src(path_config.test.clean).pipe(vinylPaths(del));
+	return del(path_config.test.dest);
 });
+
+gulp.task('clean', function (callback) {
+	return runseq(['clean:src', 'clean:test'], callback);
+})
 
 gulp.task('build', function (callback) {
 	return runseq('clean:src', 'compile:src', callback);
@@ -78,7 +84,7 @@ gulp.task('build:test', function (callback) {
 });
 
 gulp.task('test:mocha', function () {
-    return gulp.src([path_config.test.dest + '/test/**/*.js'], { read: false })
+    return gulp.src([path_config.test.dest + '/test/mocha/**/*.js'], { read: false })
 	// gulp-mocha needs filepaths so you can't have any plugins before it 
         .pipe(mocha());
 });
