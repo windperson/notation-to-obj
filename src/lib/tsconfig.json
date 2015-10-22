@@ -3,9 +3,10 @@
     "inlineSourceMap": false,
     "module": "commonjs",
     "newLine": "CRLF",
+    "noEmitOnError": true,
     "removeComments": true,
+    "noResolve": false,
     "sourceMap": true,
-    "declaration": true,
     "target": "es5"
   }
 }
