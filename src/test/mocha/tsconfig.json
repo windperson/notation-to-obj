@@ -7,5 +7,9 @@
     "sourceMap": true,
     "target": "es5",
     "watch": true
-  }
+  },
+  "files": [
+    "./test/unittest.ts",
+    "../../../typings/tsd.d.ts"
+  ]
 }

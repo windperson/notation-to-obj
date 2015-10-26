@@ -10,5 +10,9 @@
     "declaration": true,
     "sourceMap": true,
     "target": "es5"
-  }
+  },
+  "files": [
+    "./index.ts",
+    "../../typings/tsd.d.ts"
+  ]
 }

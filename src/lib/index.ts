@@ -1,4 +1,3 @@
-/// <reference path="../../typings/tsd.d.ts" />
 export function IsNotNullnorUndefined(obj: any): boolean {
     return typeof obj !== 'undefined' && null !== obj;
 }
