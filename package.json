@@ -14,6 +14,7 @@
   },
   "homepage": "https://github.com/windperson/notation-to-obj#readme",
   "devDependencies": {
+    "awesome-typescript-loader": "~0.14.0",
     "bunyan": "~1.5.1",
     "del": "~2.0.2",
     "gulp": "~3.9.0",
