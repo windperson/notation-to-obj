@@ -19,3 +19,4 @@ deploy:
   on:
     tags: true
     repo: windperson/notation-to-obj
+    all_branches: true
