@@ -1,12 +1,15 @@
 language: node_js
 node_js:
-- stable
+  - stable
+  - "4.1"
 before_script:
-- npm install -g gulp
+  - npm install -g gulp
 script: gulp test
 branches:
-  only:
-  - master
+  except:
+   - gh-pages
+   - /^(?i:test)[-_].*$/
+   - /^.*[-_](?i:test)$/
 deploy:
   provider: releases
   api_key:
@@ -19,4 +22,4 @@ deploy:
   on:
     tags: true
     repo: windperson/notation-to-obj
-    all_branches: true
+    
