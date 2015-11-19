@@ -1,14 +1,17 @@
-export function IsNotNullnorUndefined(obj: any): boolean {
-    return typeof obj !== 'undefined' && null !== obj;
+export function IsNotNullNorUndefined(obj: any): boolean {
+    "use strict";
+    return typeof obj !== "undefined" && null !== obj;
 }
 
 export function IsNullOrUndefined(obj: any): boolean {
-    return typeof obj == 'undefined' || null == obj;
+    "use strict";
+    return typeof obj === "undefined" || null == obj;
 }
 
 export function GetObjectFromName(name: string, modulePath?: string): any {
+    "use strict";
     var ctor = null;
-    if (IsNotNullnorUndefined(modulePath) && modulePath.length > 0) {
+    if (IsNotNullNorUndefined(modulePath) && modulePath.length > 0) {
         ctor = require(modulePath);
     }
     try {
@@ -19,13 +22,12 @@ export function GetObjectFromName(name: string, modulePath?: string): any {
 }
 
 function getObject(stringNotation: string, ctor: any = null): any {
-
-    let arrayNotation = stringNotation.split('.');
+    "use strict";
+    let arrayNotation = stringNotation.split(".");
     let propObj = null;
     if (IsNullOrUndefined(ctor)) {
         propObj = global[arrayNotation[0]];
-    }
-    else {
+    } else {
         let rootObj = ctor;
         if (arrayNotation.length <= 1) {
             return rootObj;
@@ -34,10 +36,10 @@ function getObject(stringNotation: string, ctor: any = null): any {
         arrayNotation.shift();
     }
 
-    if (IsNotNullnorUndefined(propObj)) {
+    if (IsNotNullNorUndefined(propObj)) {
         for (let i = 1; i < arrayNotation.length; i++) {
             let nextProp = propObj[arrayNotation[i]];
-            if (IsNotNullnorUndefined(nextProp)) {
+            if (IsNotNullNorUndefined(nextProp)) {
                 propObj = nextProp;
             } else {
                 throw new Error(`There's no ${arrayNotation[i]} property!`);

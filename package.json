@@ -24,6 +24,7 @@
     "mocha": "~2.3.3",
     "run-sequence": "~1.1.4",
     "source-map-support": "~0.3.2",
+    "tslint": "~2.5.1",
     "vinyl-paths": "~2.0.0",
     "webpack": "~1.12.2"
   }
