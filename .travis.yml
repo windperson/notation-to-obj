@@ -1,9 +1,25 @@
 language: node_js
 node_js:
-  - "stable"
+  - stable
+  - "4.1"
 before_script:
   - npm install -g gulp
 script: gulp test
 branches:
-  only:
-    - master
+  except:
+   - gh-pages
+   - /^(?i:test)[-_].*$/
+   - /^.*[-_](?i:test)$/
+deploy:
+  provider: releases
+  api_key:
+    secure: OdOGarmESAN6HlhLYjGlYkU6LdDhN7i1MhyS/c5bT4zepdoW18Bgn2StpJTCkKKA7aJMEBc0eNSDJwY9NzT1oHht08XiZDJmAv0fMkgdx9wO417yjZ8LpmvUeYohqCVvs1PfEky6/RJEI0mtEtBH+5rRIDUu5cKSh+HvyAhBpCgx/Rwto00KIAmICviDk2rbS1C3cRJL89aWs4tC8PFQdHE8ITun6sYMjTkMckeNQYhJJ1Ytjatzb97qBZer8y8Bt1KErueqNvmyO2iaD33oavvhAuWzizW/JINw/eC02p4nVWgISFnLFG4KdrtL5v+tkaIpd5I5Dsg1GKDr6234hY4mHeoaBcKLm1Jn+N1eafpxs8ImWSWLvBEsoEbgD/lRWEqGQDU0PGnJVmDoMU8qA2vGK3PalGMCSll/vhySwQ20HKjbS1WNRzVI7josWknSr8FcvrZfaUxQLxA3KW7jfp8/rRkl5Z7Tla5ykKoxdinuLYTj9Mi5X+WFI+RildzkQXzvySJaVeFZH6gqFWh5jVK5KqlF8Y1oYIfF7xBsKjnneMX63cUsscZ3EDCnp55wHWkr8wndBiCKznE5LZQbb8cfGA6WrmYxfmRdyKuxfXNfoZ0M0Ibpw/RRHqi6u0z89lUJdO7XBXOazLCR5luEWvxRKWFdBkc8j8dv6XfuJgc=
+  file: 
+    - "build/release/definitions/index.d.ts"
+    - "build/release/index.js"
+    - "build/release/index.js.map"
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: windperson/notation-to-obj
+    
