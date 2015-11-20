@@ -37,6 +37,7 @@
 				"test"
 			],
 			"isBuildCommand": false,
+			"isTestCommand": true,
 			"problemMatcher": [
 				"$tsc",
 				"$gulp-tsc"
