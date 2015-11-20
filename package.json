@@ -1,6 +1,6 @@
 {
   "name": "notation-to-obj",
-  "version": "0.0.2-beta",
+  "version": "0.0.2",
   "description": "Js Utiltiy to get javascript object from a string notation like \"a.b.c\"",
   "main": "build/release/index.js",
   "repository": {
