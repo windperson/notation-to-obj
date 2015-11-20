@@ -1,0 +1,5 @@
+.travis.yml
+gulpfile.js
+tsd.json
+typings/
+.vscode/
