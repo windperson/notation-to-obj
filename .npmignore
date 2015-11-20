@@ -3,3 +3,4 @@ gulpfile.js
 tsd.json
 typings/
 .vscode/
+build/test/
