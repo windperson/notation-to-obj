@@ -1,6 +1,6 @@
 {
   "name": "notation-to-obj",
-  "version": "0.0.1",
+  "version": "0.0.1-beta",
   "description": "Js Utiltiy to get javascript object from a string notation like \"a.b.c\"",
   "main": "build/release/index.js",
   "repository": {
@@ -12,6 +12,9 @@
   "bugs": {
     "url": "https://github.com/windperson/notation-to-obj/issues"
   },
+  "keywords": [
+    "reflection"
+  ],
   "homepage": "https://github.com/windperson/notation-to-obj#readme",
   "devDependencies": {
     "awesome-typescript-loader": "~0.15.0",
