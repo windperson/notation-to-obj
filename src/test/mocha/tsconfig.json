@@ -10,6 +10,6 @@
   },
   "files": [
     "./test/unittest.ts",
-    "../../../typings/tsd.d.ts"
+    "../../../typings/tsd-test.d.ts"
   ]
 }

@@ -5,7 +5,6 @@
 // ${fileDirname}: the current opened file's dirname
 // ${fileExtname}: the current opened file's extension
 // ${cwd}: the current working directory of the spawned process
-
 {
 	"version": "0.1.0",
 
@@ -18,14 +17,19 @@
 	"showOutput": "silent",
 
 	// Tell the tsc compiler to use the tsconfig.json from the open folder.
-	"args": ["--no-color"],
+	"args": [
+		"--no-color"
+	],
 
 	"tasks": [
 		{
 			"taskName": "build",
 			"args": [],
 			"isBuildCommand": true,
-			"problemMatcher": "$gulp-tsc"
+			"problemMatcher": [
+				"$tsc",
+				"$gulp-tsc"
+			]
 		},
 		{
 			"taskName": "test",
@@ -33,7 +37,10 @@
 				"test"
 			],
 			"isBuildCommand": false,
-			"problemMatcher": "$gulp-tsc"
+			"problemMatcher": [
+				"$tsc",
+				"$gulp-tsc"
+			]
 		}
 	]
 }

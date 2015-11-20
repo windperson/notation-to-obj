@@ -13,6 +13,6 @@
   },
   "files": [
     "./index.ts",
-    "../../typings/tsd.d.ts"
+    "../../typings/tsd-dev.d.ts"
   ]
 }

@@ -1,5 +1,5 @@
 import "source-map-support/register";
-import assert = require("assert");
+import * as assert from "assert";
 
 import {GetObjectFromName, IsNullOrUndefined, IsNotNullNorUndefined} from "../../../lib/index";
 
